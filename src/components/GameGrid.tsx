@@ -42,7 +42,10 @@ const GameGrid = () => {
         {data?.pages.map((page, index) => (
           <React.Fragment key={index}>
             {page.results.map((game) => (
-              <GameCardContainer key={game.id}>
+              <GameCardContainer
+                _hover={{ transform: "scale(1.2)" }}
+                key={game.id}
+              >
                 <GameCard game={game} />
               </GameCardContainer>
             ))}
