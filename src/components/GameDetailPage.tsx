@@ -4,6 +4,8 @@ import { Heading, Spinner, Text } from "@chakra-ui/react";
 
 const GameDetailPage = () => {
   const { slug } = useParams();
+  //(slug || '') or ! - which tells TS that this constant will never
+  //be null
   const { data: game, isLoading, error } = useGame(slug!);
 
   if (isLoading) return <Spinner />;
